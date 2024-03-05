@@ -14,7 +14,7 @@ get_files(path=path_, ls=file_ls)
 
 file_types: set = {a.split(".")[-1] for a in file_ls}
 
-print('\n\n****************************\n\n')
-
+print('\n****************************\n')
 print(f'file count: {len(file_ls)}')
 print(f'types of files: {file_types}')
+print('\n****************************\n')
