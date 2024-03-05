@@ -1,6 +1,6 @@
 import os
 
-def get_files(path, ls):
+def get_files(path: str, ls: list):
     for element in os.scandir(path=path):
         if element.is_dir() and os.listdir(element.path) != []:
             get_files(element.path, ls)
