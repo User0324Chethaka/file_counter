@@ -2,9 +2,9 @@ import os
 
 def get_files(path, ls):
     for element in os.scandir(path=path):
-        if element.is_dir():
+        if element.is_dir() and os.listdir(element.path) != []:
             get_files(element.path, ls)
-        else:
+        elif element.is_file():
             ls.append(element.name)
 
 file_ls: list[os.DirEntry] = []
